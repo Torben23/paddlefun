@@ -65,16 +65,17 @@
     aos_init();
   });
 
-    // Calendario Verga
-    $(document).ready(function() {
-      // Configurar el selector de fecha
-      $("#datepicker").datepicker({
-        dateFormat: 'dd/mm/yy',
-        onSelect: function(dateText) {
-          // Al seleccionar una fecha, almacenarla en el campo oculto
-          $("#date").val(dateText);
-        }
-      });
+     // Calendario Verga
+  $(document).ready(function() {
+    // Configurar el selector de fecha
+    $("#datepicker").datepicker({
+      dateFormat: 'dd/mm/yy',
+      onSelect: function(dateText) {
+        // Al seleccionar una fecha, almacenarla en el campo oculto
+        $("#date").val(dateText);
+      }
+    });
+  });
   
       // Script para enviar mensaje por WhatsApp
       function sendWhatsAppMessage() {
