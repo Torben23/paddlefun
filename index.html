@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>PaddleFun</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+   <!-- Vendor CSS Files -->
+   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+   <link href="assets/css/variables.css" rel="stylesheet">
+ 
+   <!-- Template Main CSS File -->
+   <link href="assets/css/style.css" rel="stylesheet">
+ 
+   <!-- flatpickr -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+   
+   <!-- jQuery -->
+   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+ 
+   <!-- Bootstrap JS -->
+   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+ 
+   <!-- flatpickr JS -->
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+<header id="header" class="d-flex align-items-center">
+  <div class="container">
+    <div class="row content">
+      <div class="col-lg-6 titulo">
+        <h1>Paddle<span class="fun">Fun!</span></h1>
+        <h2>Glide, Ride, and Slide on <span class="fun">Lake Atitlán!</span></h2>
+      </div>
+      <div class="col-lg-6 pt-lg-0">
+        <!--<div class="section-title">
+        <h2>Book your slot</h2>
+        </div>-->
+        <div id="contact" class="contact row justify-content-center">
+          <div class="col-lg-10 form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="text" id="datepicker" class="form-control" placeholder="Select Date" data-rule="minlen:4" data-msg="Please enter a valid date">
+                <input type="hidden" id="date" name="date" /> 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 form-group mt-3">
+                <input type="text" class="form-control" name="level" id="level" placeholder="Level" list="levels" required>
+                  <datalist id="levels">
+                    <option value="Beginners">
+                    <option value="Intermediate Beginners">
+                    <option value="Intermediate">
+                  </datalist>
+              </div>
+              <div class="col-md-6 form-group mt-3">
+                <input type="number" id="people" class="form-control" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars">
+              </div>
+            </div>
+            <div class="text-center mt-3">
+              <a id="whatsappLink" class="text-center mt-3"><button type="submit">Reserve Your Slot</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header><!-- End #header -->
+
+  <main id="main">
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container" data-aos="fade-up">
+
+        <ul class="nav nav-tabs row gy-4">
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+              <i class="bi bi-piggy-bank color-white"></i>
+              
+            </a>
+          </li><!-- End Tab 1 Nav -->
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+              <i class="bi bi-calendar3 color-white"></i>
+              
+            </a>
+          </li><!-- End Tab 2 Nav -->
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+              <i class="bi bi-info-circle color-white"></i>
+             
+            </a>
+          </li><!-- End Tab 3 Nav -->
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+              <i class="bi bi-life-preserver color-white"></i>
+             
+            </a>
+          </li><!-- End Tab 4 Nav -->
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5">
+              <i class="bi bi-camera-reels color-white"></i>
+              
+            </a>
+          </li><!-- End Tab 5 Nav -->
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-6">
+              <i class="bi bi-clipboard-check color-white"></i>
+              
+            </a>
+          </li><!-- End Tab 6 Nav -->
+
+        </ul>
+
+        <div class="tab-content">
+
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+                <h3>What are the lesson prices?</h3>
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> We offer individual sessions at 15 USD per person.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> For duos, enjoy our couple's special at 25 USD.</li>
+                </ul>
+                <p class="fst-italic">
+                  Lessons attendance requires prior reservation.
+                </p>
+              </div>
+            </div>
+          </div><!-- End Tab Content 1 -->
+
+          <div class="tab-pane" id="tab-2">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1">
+                <h3>Lesson Schedule:</h3>
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> Beginners: 10 AM - 11 AM.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Beginners Intermediate: 11 AM - 12 PM</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Intermediate: 12 PM - 01 PM.</li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- End Tab Content 2 -->
+
+          <div class="tab-pane" id="tab-3">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1">
+                <h3>What should I bring to the lessons?</h3>
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> Comfortable swimwear.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Sunscreen</li>
+                  <li><i class="bi bi-check-circle-fill"></i> A hat for sun protection.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Sunglasses with a strap.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Waterproof camera (optional)</li>
+                </ul>
+                <p class="fst-italic">
+                  We provide the paddleboard and safety gear.
+                </p>
+              </div>
+            </div>
+          </div><!-- End Tab Content 3 -->
+
+          <div class="tab-pane" id="tab-4">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1">
+                <h3>Is a life jacket required during the lessons?</h3>
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> Yes, for your safety, all participants must agree to use the provided life jackets during the lesson, safety is our top priority.</li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- End Tab Content 4 -->
+          
+          <div class="tab-pane" id="tab-5">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1">
+                <h3>Can I have my experience filmed?</h3>
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> Absolutely! For an additional fee, we offer a drone videography service to capture your paddleboarding adventure. Capture your paddleboard journey on Lake Atitlan from a unique aerial perspective!</li>
+                </ul>              
+              </div>
+            </div>
+          </div><!-- End Tab Content 5 -->
+
+          <div class="tab-pane" id="tab-6">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1">
+                <h3>Terms and conditions</h3>
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> Upon enrolling in any paddleboarding lesson provided by PaddleFun Atitlan, the client acknowledges and accepts the previously established conditions. They understand that compliance with safety measures, including the mandatory use of life jackets, is non-negotiable and essential for participation. The client is aware of the necessary attire and equipment required for the lesson and agrees to bring such items as specified. Any additional services, such as drone videography, will incur additional charges, which the client will accept if choosing to utilize them. By proceeding with the reservation and participating in the lessons, the client agrees to adhere to all guidelines and instructions provided by PaddleFun Atitlan, ensuring a safe and enjoyable experience on Lake Atitlan.</li>
+                <ul>                
+              </div>
+            </div>
+          </div><!-- End Tab Content 6 -->
+
+
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+  </main><!-- End #main -->
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-legal text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>PaddleFun</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed by <a href="https://www.linkedin.com/in/marcos-berton/">Torben</a>
+          </div>
+        </div>
+<!--
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+-->
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
