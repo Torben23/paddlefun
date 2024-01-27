@@ -63,15 +63,14 @@
 
   // Calendario
   $(document).ready(function() {
-    // Configurar el selector de fecha
+    // Configuring the datepicker
     $("#datepicker").datepicker({
       dateFormat: 'dd/mm/yy',
       onSelect: function(dateText) {
-        // Al seleccionar una fecha, almacenarla en el campo oculto
+        // When selecting a date, store it in the hidden field
         $("#date").val(dateText);
       }
     });
-  });
 
   // Script para enviar mensaje por WhatsApp
   function sendWhatsAppMessage() {
