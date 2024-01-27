@@ -62,13 +62,12 @@
   window.addEventListener('load', aos_init);
 
   // Calendario
-  $(document).ready(function() {
-    // Configurar el selector de fecha
-    $("#datepicker").datepicker({
-      dateFormat: 'dd/mm/yy',
-      onSelect: function(dateText) {
-        // Al seleccionar una fecha, almacenarla en el campo oculto
-        $("#date").val(dateText);
+  document.addEventListener('DOMContentLoaded', function () {
+    flatpickr("#datepicker", {
+      dateFormat: 'd/m/Y',
+      onChange: function (selectedDates, dateStr, instance) {
+        // Al cambiar la fecha, almacenarla en el campo oculto
+        document.getElementById('date').value = dateStr;
       }
     });
   });
