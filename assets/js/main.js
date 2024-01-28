@@ -63,42 +63,42 @@
 
   // Calendario verggg
   // Declarar la variable picker fuera del evento DOMContentLoaded
-var picker;
+  var picker;
 
-// Calendario verggg
-document.addEventListener("DOMContentLoaded", function () {
-  // Configurar Pikaday
-  picker = new Pikaday({
-    field: document.getElementById('Pikaday'),
-    format: 'DD/MM/YYYY', // formato de fecha deseado
-    onSelect: function (selectedDate) {
-      // Pikaday manejará la actualización del campo automáticamente
-      // También puedes realizar acciones adicionales con la fecha seleccionada si es necesario
-    }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Configurar Pikaday
+    picker = new Pikaday({
+      field: document.getElementById('Pikaday'),
+      format: 'DD/MM/YYYY', // formato de fecha deseado
+      onSelect: function (selectedDate) {
+        // Pikaday manejará la actualización del campo automáticamente
+        // También puedes realizar acciones adicionales con la fecha seleccionada si es necesario
+      }
+    });
   });
-});
 
-// Script para enviar mensaje por WhatsApp
-function sendWhatsAppMessage() {
-  var name = document.getElementById('name').value;
-  // Obtener la fecha seleccionada por Pikaday
-  var date = picker.toString('DD/MM/YYYY');
-  var people = document.getElementById('people').value;
-  var level = document.getElementById('level').value;
+  // Script para enviar mensaje por WhatsApp
+  function sendWhatsAppMessage() {
+    var name = document.getElementById('name').value;
+    // Obtener la fecha seleccionada por Pikaday
+    var date = picker.toString('DD/MM/YYYY');
+    var people = document.getElementById('people').value;
+    var level = document.getElementById('level').value;
 
- // Construct the WhatsApp message with reservation information
-var whatsappMessage = "Nombre: " + name + "\nFecha: " + date + "\nPersonas: " + people + "\nLevel: " + level;
+  // Construct the WhatsApp message with reservation information
+  var whatsappMessage = "Nombre: " + name + "\nFecha: " + date + "\nPersonas: " + people + "\nLevel: " + level;
 
-// Reemplazar caracteres especiales
-whatsappMessage = encodeURIComponent(whatsappMessage).replace(/%0A/g, '%0D%0A');
+  // Reemplazar caracteres especiales
+  whatsappMessage = encodeURIComponent(whatsappMessage).replace(/%0A/g, '%0D%0A');
 
-// Create the WhatsApp link
-var whatsappLink = "https://wa.me/542216062309/?text=" + whatsappMessage;
+  // Create the WhatsApp link
+  var whatsappLink = "https://wa.me/542216062309/?text=" + whatsappMessage;
 
 
-  // Open the link in a new window/tab
-  window.open(whatsappLink, "_blank");
-}
+    // Open the link in a new window/tab
+    window.open(whatsappLink, "_blank");
+  }
 
 
 
