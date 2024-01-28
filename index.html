@@ -8,6 +8,18 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <!-- Metadatos de Open Graph -->
+  <meta property="og:title" content="Paddleboarding Lessons">
+  <meta property="og:description" content="Learn paddleboarding with PaddleFun!">
+  <meta property="og:image" content="https://paddlefun.netlify.app/assets/img/icon2.png"> <!-- Reemplaza con la URL de la imagen que quieres mostrar -->
+  <meta property="og:url" content="https://paddlefun.netlify.app"> <!-- Reemplaza con la URL de tu página -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PaddleFun">
+
+  <!-- Otros metadatos -->
+  <meta name="keywords" content="paddleboarding, lessons, Lake Atitlán">
+
+
   <!-- Favicons -->
   <link href="assets/img/icon2.png" rel="icon">
   <link href="assets/img/icon.png" rel="apple-touch-icon">
@@ -28,10 +40,15 @@
    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-   <!-- flatpickr -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-   
+  <!-- CSS de Pikaday -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/css/pikaday.min.css">
+
+  <!-- Moment.js (requerido por Pikaday) -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+  <!-- Pikaday JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
+
 </head>
 
 <body>
@@ -55,18 +72,18 @@
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
               </div>
               <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="text" id="datepicker" class="form-control" placeholder="Select Date" data-rule="minlen:4" data-msg="Please enter a valid date">
+                <input type="text" id="Pikaday" class="form-control" placeholder="Select Date" data-rule="minlen:4" data-msg="Please enter a valid date">
                 <input type="hidden" id="date" name="date" />   
               </div>
             </div>
             <div class="row">
               <div class="col-md-6 form-group mt-3">
-                <input type="text" class="form-control" name="level" id="level" placeholder="Level" list="levels" required>
-                  <datalist id="levels">
-                    <option value="Beginners">
-                    <option value="Intermediate Beginners">
-                    <option value="Intermediate">
-                  </datalist>
+                <select id="level" class="form-control" required>
+                  <option value="" disabled selected>Select Level</option>
+                  <option value="Beginners">Beginners</option>
+                  <option value="Inter Beginners">Intermediate Beginners</option>
+                  <option value="Intermediate">Intermediate</option>
+                </select>
               </div>
               <div class="col-md-6 form-group mt-3">
                 <input type="number" id="people" class="form-control" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars">

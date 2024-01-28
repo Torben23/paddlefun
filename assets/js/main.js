@@ -61,33 +61,46 @@
 
   window.addEventListener('load', aos_init);
 
-  // Calendario
-  document.addEventListener('DOMContentLoaded', function () {
-    flatpickr("#datepicker", {
-      dateFormat: 'd/m/Y',
-      onChange: function (selectedDates, dateStr, instance) {
-        // Al cambiar la fecha, almacenarla en el campo oculto
-        document.getElementById('date').value = dateStr;
-      }
-    });
+  // Calendario verggg
+  // Declarar la variable picker fuera del evento DOMContentLoaded
+var picker;
+
+// Calendario verggg
+document.addEventListener("DOMContentLoaded", function () {
+  // Configurar Pikaday
+  picker = new Pikaday({
+    field: document.getElementById('Pikaday'),
+    format: 'DD/MM/YYYY', // formato de fecha deseado
+    onSelect: function (selectedDate) {
+      // Pikaday manejará la actualización del campo automáticamente
+      // También puedes realizar acciones adicionales con la fecha seleccionada si es necesario
+    }
   });
+});
 
-  // Script para enviar mensaje por WhatsApp
-  function sendWhatsAppMessage() {
-    var name = document.getElementById('name').value;
-    var date = document.getElementById('date').value;
-    var people = document.getElementById('people').value;
-    var level = document.getElementById('level').value;
+// Script para enviar mensaje por WhatsApp
+function sendWhatsAppMessage() {
+  var name = document.getElementById('name').value;
+  // Obtener la fecha seleccionada por Pikaday
+  var date = picker.toString('DD/MM/YYYY');
+  var people = document.getElementById('people').value;
+  var level = document.getElementById('level').value;
 
-    // Construct the WhatsApp message with reservation information
-    var whatsappMessage = "Reservation%0A%0AName: " + name + "%0ADate: " + date + "%0APeople: " + people + "%0ALevel: " + level;
+ // Construct the WhatsApp message with reservation information
+var whatsappMessage = "Nombre: " + name + "\nFecha: " + date + "\nPersonas: " + people + "\nLevel: " + level;
 
-    // Create the WhatsApp link
-    var whatsappLink = "https://wa.me/542216062309/?text=" + encodeURIComponent(whatsappMessage);
+// Reemplazar caracteres especiales
+whatsappMessage = encodeURIComponent(whatsappMessage).replace(/%0A/g, '%0D%0A');
 
-    // Open the link in a new window/tab
-    window.open(whatsappLink, "_blank");
-  }
+// Create the WhatsApp link
+var whatsappLink = "https://wa.me/542216062309/?text=" + whatsappMessage;
+
+
+  // Open the link in a new window/tab
+  window.open(whatsappLink, "_blank");
+}
+
+
 
   // Add click event listener to the WhatsApp button
   on('click', '#whatsappLink', function(event) {

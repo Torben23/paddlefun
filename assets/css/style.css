@@ -130,27 +130,34 @@ h6 {
   padding-bottom: 8px;
 }
 
-.contact .form input,
+.contact .form input, 
+.contact .form #level,
 .contact .form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
+  color: rgba(255, 255, 255, 0.656);
 }
 
 .contact .form input::-moz-placeholder,
 .contact .form textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.656);
+}
+
+#level option {
+  background-color: var(--color-primary);
+  color: white;
 }
 
 .contact .form input::placeholder,
 .contact .form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.656);
 }
 
-.contact .form input {
+.contact .form input 
+.contact .form select {
   height: 44px;
 }
 
@@ -161,9 +168,10 @@ h6 {
 .contact .form button[type=submit] {
   background: var(--color-primary);
   border: 0;
-  padding: 10px 24px;
+  padding: 10px 20px;
   color: #fff;
   transition: 0.4s;
+  border-radius: 10px;
 }
 
 .contact .form button[type=submit]:hover {
