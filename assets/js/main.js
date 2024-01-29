@@ -87,7 +87,7 @@
     var level = document.getElementById('level').value;
 
   // Construct the WhatsApp message with reservation information
-  var whatsappMessage = "Nombre: " + name + "\nFecha: " + date + "\nPersonas: " + people + "\nLevel: " + level;
+  var whatsappMessage = "Reservación: " + "\nNombre: " + name + "\nFecha: " + date + "\nPersonas: " + people + "\nLevel: " + level;
 
   // Reemplazar caracteres especiales
   whatsappMessage = encodeURIComponent(whatsappMessage).replace(/%0A/g, '%0D%0A');
